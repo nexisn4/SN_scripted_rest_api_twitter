@@ -3,7 +3,7 @@
         <active>true</active>
         <consumes>application/json,application/xml,text/xml</consumes>
         <consumes_customized>false</consumes_customized>
-        <default_operation_uri>/api/x_106096_twitter/twitter/statuses/show/{p1}/{p2}</default_operation_uri>
+        <default_operation_uri/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>GET</http_method>
         <name>Individual Status</name>
@@ -40,8 +40,8 @@
         'queryParam1': q1,
         'queryParam2': q2,
 		
-		'version': 1,
-		'authenitication': 'not required',
+		'version': 2,
+		'authenitication': 'required',
     };
 
     //setup the return response object
@@ -51,28 +51,28 @@
 
 })(request, response);
 ]]></operation_script>
-        <operation_uri>/api/x_106096_twitter/v1/twitter/statuses/show/{p1}/{p2}</operation_uri>
+        <operation_uri>/api/x_106096_twitter/v2/twitter/statuses/show/{p1}/{p2}</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
         <relative_path>/statuses/show/{p1}/{p2}</relative_path>
         <request_example/>
-        <requires_acl_authorization>true</requires_acl_authorization>
-        <requires_authentication>false</requires_authentication>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
         <requires_snc_internal_role>true</requires_snc_internal_role>
         <short_description/>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin-nexisn4</sys_created_by>
-        <sys_created_on>2019-02-24 21:35:49</sys_created_on>
-        <sys_id>07d3e60edbb76300f0d2da75ca9619d0</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_created_on>2019-02-24 23:28:23</sys_created_on>
+        <sys_id>5abd7acadbf76300f0d2da75ca961989</sys_id>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Individual Status</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
-        <sys_update_name>sys_ws_operation_07d3e60edbb76300f0d2da75ca9619d0</sys_update_name>
+        <sys_update_name>sys_ws_operation_5abd7acadbf76300f0d2da75ca961989</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-02-24 23:31:16</sys_updated_on>
+        <sys_updated_on>2019-02-24 23:31:32</sys_updated_on>
         <web_service_definition display_value="Twitter">dbc55a06dbb76300f0d2da75ca96193a</web_service_definition>
-        <web_service_version display_value="v1">b5fb3ec2dbf76300f0d2da75ca9619ff</web_service_version>
+        <web_service_version display_value="v2">235cba46dbf76300f0d2da75ca961980</web_service_version>
     </sys_ws_operation>
 </record_update>

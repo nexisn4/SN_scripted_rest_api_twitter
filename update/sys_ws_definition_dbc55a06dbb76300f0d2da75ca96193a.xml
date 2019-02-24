@@ -4,10 +4,10 @@
         <base_uri>/api/x_106096_twitter/twitter</base_uri>
         <consumes>application/json,application/xml,text/xml</consumes>
         <consumes_customized>false</consumes_customized>
-        <default_version>No active default version</default_version>
+        <default_version>v1</default_version>
         <doc_link/>
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
-        <is_versioned>false</is_versioned>
+        <is_versioned>true</is_versioned>
         <name>Twitter</name>
         <namespace>x_106096_twitter</namespace>
         <produces>application/json,application/xml,text/xml</produces>
@@ -18,13 +18,13 @@
         <sys_created_by>admin-nexisn4</sys_created_by>
         <sys_created_on>2019-02-24 20:34:08</sys_created_on>
         <sys_id>dbc55a06dbb76300f0d2da75ca96193a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Twitter</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
         <sys_update_name>sys_ws_definition_dbc55a06dbb76300f0d2da75ca96193a</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-02-24 20:34:08</sys_updated_on>
+        <sys_updated_on>2019-02-24 23:20:41</sys_updated_on>
     </sys_ws_definition>
 </record_update>
