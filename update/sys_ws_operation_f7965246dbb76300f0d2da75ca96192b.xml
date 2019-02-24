@@ -10,7 +10,32 @@
         <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
 
     // implement resource here
-
+	var results = [];
+	var json = new global.JSON();
+	var gr = new GlideRecord('live_message');
+	gr.orderByDesc('sys_created_on');
+	gr.setLimit(20);
+	gr.query();
+	
+	while (gr.next()){
+		var username = gr.sys_created_by.toString();
+		var tweet = {
+			'text': gr.message.toString(),
+			'id': gr.sys_id.toString(),
+			'created_at': gr.sys_created_on.toString(),
+			'in_reply_to_status_id': gr.reply_to.toString(),
+			'user': {'name': username}
+		};
+		results.push(tweet);
+	}
+	
+	var writer = response.getStreamWriter();
+	var hdrs = {};
+	var contenttype = request.getHeader('Accept');
+	hdrs['Content-Type'] = contenttype;
+	response.setHheaders(hdrs);
+	
+	writer.writeString(json.encode(results));
 })(request, response);]]></operation_script>
         <operation_uri>/api/x_106096_twitter/twitter/statuses/home_timeline</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
@@ -25,14 +50,14 @@
         <sys_created_by>admin-nexisn4</sys_created_by>
         <sys_created_on>2019-02-24 20:38:31</sys_created_on>
         <sys_id>f7965246dbb76300f0d2da75ca96192b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Home Timeline</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
         <sys_update_name>sys_ws_operation_f7965246dbb76300f0d2da75ca96192b</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-02-24 20:38:31</sys_updated_on>
+        <sys_updated_on>2019-02-24 21:53:26</sys_updated_on>
         <web_service_definition display_value="Twitter">dbc55a06dbb76300f0d2da75ca96193a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
