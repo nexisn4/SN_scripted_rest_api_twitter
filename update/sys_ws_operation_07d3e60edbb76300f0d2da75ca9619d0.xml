@@ -7,35 +7,51 @@
         <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
         <http_method>GET</http_method>
         <name>Individual Status</name>
-        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
-	
-	// implement resource here
-	var json = new global.JSON();
-	var id = request.pathParams['id'];
-	var gr = new GlideRecord('live_message');
-	gr.get(id);
-	
-	var username = gr.sys_created_by.toString();
-	var tweet = {
-		'text': gr.message.toString(),
-		'id': gr.sys_id.toString(),
-		'created_at': gr.sys_created_on.toString(),
-		'in_reply_to_status_id': gr.reply_to.toString(),
-		'user': {'name': username}
-	};
-	
-	var writer = response.getStreamWriter();
-	var hdrs = {};
-	var contenttype = request.getHeader('Accept');
-	hdrs['Content-Type'] = contenttype;
-	response.setHeaders(hdrs);
-	
-	writer.writeString(json.encode(tweet));		
-})(request, response);]]></operation_script>
-        <operation_uri>/api/x_106096_twitter/twitter/statuses/show/{id}</operation_uri>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	/*
+	This is an example Scripted Rest API resource
+	GET, relative path /statuses/show/{p1}/{p2}, absolute path /api/x_106096_twitter/twitter/statuses/show/{p1}/{p2}
+
+	eg,
+	https://dev67141.service-now.com/api/x_106096_twitter/twitter/statuses/show/p1/p2?q1=q11&q2=q22
+
+	This hows how to set the URL to make the Rest call with path parameters and query parameters, and how to return an object that is JSON formatted with HTTP status.
+	*/
+
+
+    // implement resource here
+    //getting path parameters
+    var pathParams = request.pathParams;
+    var p1 = pathParams.p1;
+    var p2 = pathParams.p2;
+
+    //getting query parameters
+    var queryParams = request.queryParams;
+    var q1 = queryParams.q1;
+    var q2 = queryParams.q2;
+
+    //do some processing here
+
+    //creating the json object to return
+    var tweet = {
+        'pathParam1': p1,
+        'pathParam2': p2,
+
+        'queryParam1': q1,
+        'queryParam2': q2,
+    };
+
+    //setup the return response object
+    response.setContentType("application/json");
+    response.setBody(tweet);
+    response.setStatus(200);
+
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_106096_twitter/twitter/statuses/show/{p1}/{p2}</operation_uri>
         <produces>application/json,application/xml,text/xml</produces>
         <produces_customized>false</produces_customized>
-        <relative_path>/statuses/show/{id}</relative_path>
+        <relative_path>/statuses/show/{p1}/{p2}</relative_path>
         <request_example/>
         <requires_acl_authorization>true</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
@@ -45,14 +61,14 @@
         <sys_created_by>admin-nexisn4</sys_created_by>
         <sys_created_on>2019-02-24 21:35:49</sys_created_on>
         <sys_id>07d3e60edbb76300f0d2da75ca9619d0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Individual Status</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
         <sys_update_name>sys_ws_operation_07d3e60edbb76300f0d2da75ca9619d0</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-02-24 21:55:01</sys_updated_on>
+        <sys_updated_on>2019-02-24 23:00:05</sys_updated_on>
         <web_service_definition display_value="Twitter">dbc55a06dbb76300f0d2da75ca96193a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

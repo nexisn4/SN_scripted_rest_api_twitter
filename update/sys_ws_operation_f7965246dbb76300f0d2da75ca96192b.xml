@@ -33,7 +33,7 @@
 	var hdrs = {};
 	var contenttype = request.getHeader('Accept');
 	hdrs['Content-Type'] = contenttype;
-	response.setHheaders(hdrs);
+	response.setHeaders(hdrs);
 	
 	writer.writeString(json.encode(results));
 })(request, response);]]></operation_script>
@@ -50,14 +50,14 @@
         <sys_created_by>admin-nexisn4</sys_created_by>
         <sys_created_on>2019-02-24 20:38:31</sys_created_on>
         <sys_id>f7965246dbb76300f0d2da75ca96192b</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Home Timeline</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
         <sys_update_name>sys_ws_operation_f7965246dbb76300f0d2da75ca96192b</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-02-24 21:53:26</sys_updated_on>
+        <sys_updated_on>2019-02-24 22:06:06</sys_updated_on>
         <web_service_definition display_value="Twitter">dbc55a06dbb76300f0d2da75ca96193a</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>
