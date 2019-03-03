@@ -5,26 +5,26 @@
         <basic_auth_profile/>
         <basic_auth_user/>
         <content/>
-        <function_name>Default GET</function_name>
+        <function_name>jokes.one GET</function_name>
         <http_method>get</http_method>
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
-        <qualified_name>Tester [ Default GET ]</qualified_name>
-        <rest_endpoint>https://geek-jokes.sameerkumar.website/api</rest_endpoint>
+        <qualified_name>Tester [ jokes.one GET ]</qualified_name>
+        <rest_endpoint>https://api.jokes.one/jod</rest_endpoint>
         <rest_message display_value="Tester">8489f6c4dbcc3300f0d2da75ca96195d</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>admin-nexisn4</sys_created_by>
         <sys_created_on>2019-03-03 04:26:36</sys_created_on>
         <sys_id>258b7a08dbcc3300f0d2da75ca96197b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Default GET</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>jokes.one GET</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
         <sys_update_name>sys_rest_message_fn_258b7a08dbcc3300f0d2da75ca96197b</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-03-03 04:26:36</sys_updated_on>
+        <sys_updated_on>2019-03-03 04:39:48</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
