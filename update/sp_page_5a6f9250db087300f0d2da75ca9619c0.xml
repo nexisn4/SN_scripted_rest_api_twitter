@@ -3,7 +3,7 @@
         <category>custom</category>
         <css/>
         <draft>false</draft>
-        <dynamic_title_structure>ree</dynamic_title_structure>
+        <dynamic_title_structure>Here's My Page</dynamic_title_structure>
         <id>twitter_page</id>
         <internal>false</internal>
         <public>false</public>
@@ -13,14 +13,14 @@
         <sys_created_by>admin-nexisn4</sys_created_by>
         <sys_created_on>2019-03-03 21:02:15</sys_created_on>
         <sys_id>5a6f9250db087300f0d2da75ca9619c0</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>twitter_page</sys_name>
         <sys_package display_value="Twitter" source="x_106096_twitter">43b5d286db776300f0d2da75ca961910</sys_package>
         <sys_policy/>
         <sys_scope display_value="Twitter">43b5d286db776300f0d2da75ca961910</sys_scope>
         <sys_update_name>sp_page_5a6f9250db087300f0d2da75ca9619c0</sys_update_name>
         <sys_updated_by>admin-nexisn4</sys_updated_by>
-        <sys_updated_on>2019-03-03 21:23:30</sys_updated_on>
+        <sys_updated_on>2019-03-04 01:59:12</sys_updated_on>
         <title>Twitter Page</title>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=5a6f9250db087300f0d2da75ca9619c0"/>
